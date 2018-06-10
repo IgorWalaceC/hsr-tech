@@ -46,6 +46,11 @@ body {
     transition: margin-left .5s;
     padding: 16px;
 }
+img{
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
 h1{    
     text-align: center;
 }
