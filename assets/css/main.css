@@ -1928,6 +1928,10 @@
 	select {
 		height: 3.5em;
 		line-height: 3.5em;
+		width: 80%;
+		margin-bottom: 1.7em;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	textarea {
@@ -2753,7 +2757,9 @@
 			text-align: center;
 			font-size: 1.7em;
 		}
-
+		.logo-menu{
+			height: 150px;
+		}
 		#header {
 			height: 80px;
 			line-height: 44px;

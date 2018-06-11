@@ -84,3 +84,43 @@ function closeNav() {
 	//document.body.style.backgroundColor = "white";
 	//document.getElementById("header").style.backgroundColor = "white";
 }
+
+  // Get the modal
+  var modal = document.getElementById('myModal');
+            
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = $("img");
+  var img_content = $(".modal-content");
+  img.each(function(e){
+	  img[e].onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = this.src;
+		  captionText.innerHTML = this.alt;                    
+		  img_content.width(img[e].naturalWidth);
+	  }
+  });
+
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");  
+	  
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() { 
+	  modal.style.display = "none";
+  }  
+  
+function searchNav() {
+	var input, filter, ul, li, a, i;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	ul = document.getElementById("menuList");
+	li = ul.getElementsByTagName("a");
+	for (i = 0; i < li.length; i++) {
+		a = li[i];
+		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			li[i].style.display = "";
+		} else {
+			li[i].style.display = "none";
+
+		}
+	}
+}
