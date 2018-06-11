@@ -1,6 +1,6 @@
 ---
 title: testando jekyll
-layout: home
+layout: post
 ---
 # testando
 ## testando

@@ -1885,8 +1885,8 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #25a2c3;
-			box-shadow: 0 0 0 1px #25a2c3;
+			border-color: rgb(0,174,172);
+			box-shadow: 0 0 0 1px rgb(0,174,172);
 		}
 
 	.select-wrapper {
@@ -1932,6 +1932,7 @@
 		margin-bottom: 1.7em;
 		margin-left: auto;
 		margin-right: auto;
+		color: white;
 	}
 
 	textarea {
@@ -2124,6 +2125,10 @@
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;
+			background-image: url(/hsr-tech/assets/img/manual.jpg);
+			height: 250px;
+			background-size: 700px;
+			background-position: center
 		}
 
 			.image.fit img {

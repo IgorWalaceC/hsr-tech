@@ -1,5 +1,30 @@
 ---
-layout: default
+permalink: "fastQuestAdmin"
 ---
-
-{{ content }}
+{% include head.html %}
+<body>               
+    {% include nav.html %}        
+    <div class="main" id="main">
+            <header id="header">
+                <nav class="left">
+                    <a href="#menu" onclick="openNav()" ><span>Menu</span></a>
+                </nav>
+                <img src="{{ "/assets/fonts/HSRTech_RGB_Cor.svg" | prepend: site.baseurl}}" alt="" class="logo logo-svg">				
+            </header>
+            <div class="container">          
+                {{ content }}
+            </div>      
+    </div>  
+    <div id="opacity" class="bodyOpacity"></div>    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>    
+    <script src="{{"/assets/js/jquery.min.js"  | prepend: site.baseurl}}"></script>
+    <script src="{{"/assets/js/jquery.scrolly.min.js"  | prepend: site.baseurl}}"></script>
+    <script src="{{"/assets/js/util.js"  | prepend: site.baseurl}}"></script>
+    <script src="{{"/assets/js/skel.min.js"  | prepend: site.baseurl}}"></script>
+    <script src="{{"/assets/js/main.js"  | prepend: site.baseurl}}"></script>    
+</body>
+</html>

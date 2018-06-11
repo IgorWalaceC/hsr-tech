@@ -4,110 +4,110 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
-(function($) {
+(function ($) {
 
 	skel.breakpoints({
-		xlarge:	'(max-width: 1680px)',
-		large:	'(max-width: 1280px)',
-		medium:	'(max-width: 980px)',
-		small:	'(max-width: 736px)',
-		xsmall:	'(max-width: 480px)'
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)'
 	});
 
-	$(function() {
+	$(function () {
 
-		var	$window = $(window),
+		var $window = $(window),
 			$body = $('body'),
 			$header = $('#header');
 
 		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+		$body.addClass('is-loading');
 
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 100);
-			});
+		$window.on('load', function () {
+			window.setTimeout(function () {
+				$body.removeClass('is-loading');
+			}, 100);
+		});
 
 		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+		$('form').placeholder();
 
 		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
-			});
+		skel.on('+medium -medium', function () {
+			$.prioritize(
+				'.important\\28 medium\\29',
+				skel.breakpoint('medium').active
+			);
+		});
 
 		// Scrolly.
-			$('.scrolly').scrolly({
-				offset: function() {
-					return $header.height();
-				}
-			});
+		$('.scrolly').scrolly({
+			offset: function () {
+				return $header.height();
+			}
+		});
 
 		// Menu.
-			$('#menu')
-				.append('<a href="#menu" class="close"></a>')
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'right'
-				});
+		$('#menu')
+			.append('<a href="#menu" class="close"></a>')
+			.appendTo($body)
+			.panel({
+				delay: 500,
+				hideOnClick: true,
+				hideOnSwipe: true,
+				resetScroll: true,
+				resetForms: true,
+				side: 'right'
+			});
 
 	});
 
 })(jQuery);
 
+
+var opacity = document.getElementById('opacity');
 function openNav() {
-	$( window ).width();
-	if ($( window ).width() <= 980) {
+	$(window).width();
+	if ($(window).width() <= 980) {
 		document.getElementById("mySidenav").style.width = "100%";
-		document.getElementById("main").style.marginLeft = "100%;";		
-	}else{
+		document.getElementById("main").style.marginLeft = "100%;";
+		opacity.style.display = "block";
+	} else {
 		document.getElementById("mySidenav").style.width = "350px";
 		document.getElementById("main").style.marginLeft = "350px";
+		opacity.style.display = "block";
 	}
-	//$('#main').css( "zIndex", 99999); 
-	//document.getElementById("header").style.backgroundColor = "rgba(0,0,0,0)";
-	//document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
-	document.getElementById("main").style.marginLeft= "0";
-	//document.body.style.backgroundColor = "white";
-	//document.getElementById("header").style.backgroundColor = "white";
+	document.getElementById("main").style.marginLeft = "0";
+	opacity.style.display = "none";
 }
 
-  // Get the modal
-  var modal = document.getElementById('myModal');
-            
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = $("img");
-  var img_content = $(".modal-content");
-  img.each(function(e){
-	  img[e].onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;                    
-		  img_content.width(img[e].naturalWidth);
-	  }
-  });
 
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");  
-	  
-  var span = document.getElementsByClassName("close")[0];
-  span.onclick = function() { 
-	  modal.style.display = "none";
-  }  
-  
+var modal = document.getElementById('myModal');
+var img = $("img");
+var img_content = $(".modal-content");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.each(function (e) {
+	img[e].onclick = function () {
+		modal.style.display = "block";
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+		img_content.width(img[e].naturalWidth);
+	}
+});
+var divOpacity = document.getElementsByClassName("bodyOpacity")[0];
+divOpacity.onclick = function () {
+	closeNav();
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+	modal.style.display = "none";
+}
+
 function searchNav() {
 	var input, filter, ul, li, a, i;
 	input = document.getElementById("myInput");

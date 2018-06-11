@@ -1,6 +1,7 @@
 ---
-layout: home
+layout: post
 title:  "Página Principal"
+permalink: "fastQuestAdmin"
 ---
 # Página Principal
 

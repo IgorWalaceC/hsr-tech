@@ -1,1 +1,13 @@
-{{ content }}
+{% include head.html %}
+<body>               
+    {% include nav.html %}        
+    <div class="main" id="main">
+            <header id="header">                
+                <img src="{{ "/assets/fonts/HSRTech_RGB_Cor.svg" | prepend: site.baseurl}}" alt="" class="logo logo-svg">				
+            </header>
+            <div class="container">          
+                {{ content }}
+            </div>      
+    </div> 
+</body>
+</html>
