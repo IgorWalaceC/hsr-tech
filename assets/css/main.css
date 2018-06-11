@@ -2749,9 +2749,13 @@
 		body {
 			padding-top: 44px;
 		}
+		.sidenav a{
+			text-align: center;
+			font-size: 1.7em;
+		}
 
 		#header {
-			height: 44px;
+			height: 80px;
 			line-height: 44px;
 		}
 
@@ -2761,16 +2765,17 @@
 			}
 
 			#header nav a[href="#menu"] {
-				font-size: 1.5em;
+				font-size: 2em;
 			}
 
 			#header nav.left {
 				left: 1em;
+				top: 1em;
 			}
 
 			#header nav.right {
 				display: none;
-			}
+			}		
 
 	}
 
@@ -2778,7 +2783,16 @@
 
 		#header {
 			min-width: 320px;
+			height: 60px;		
 		}
+			#header nav a[href="#menu"] {
+				font-size: 1.6em;
+			}
+
+			#header nav.left {
+				left: 1em;
+				top: .5em;				
+			}
 
 	}
 

@@ -65,15 +65,22 @@
 })(jQuery);
 
 function openNav() {
-	document.getElementById("mySidenav").style.width = "350px";
-	document.getElementById("main").style.marginLeft = "350px";
-	document.getElementById("header").style.backgroundColor = "rgba(0,0,0,0)";
-	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	$( window ).width();
+	if ($( window ).width() <= 980) {
+		document.getElementById("mySidenav").style.width = "100%";
+		document.getElementById("main").style.marginLeft = "100%;";		
+	}else{
+		document.getElementById("mySidenav").style.width = "350px";
+		document.getElementById("main").style.marginLeft = "350px";
+	}
+	//$('#main').css( "zIndex", 99999); 
+	//document.getElementById("header").style.backgroundColor = "rgba(0,0,0,0)";
+	//document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 	document.getElementById("main").style.marginLeft= "0";
-	document.body.style.backgroundColor = "white";
-	document.getElementById("header").style.backgroundColor = "white";
+	//document.body.style.backgroundColor = "white";
+	//document.getElementById("header").style.backgroundColor = "white";
 }

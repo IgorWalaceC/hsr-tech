@@ -1,12 +1,10 @@
 ---
 layout: home
-title:  "Testando"
-date:   2018-06-10 15:07:03 -0300
-categories: jekyll update
+title:  "Página Principal"
 ---
 # Página Principal
 
-![Tux, the Linux mascot](https://lh4.googleusercontent.com/xHmeM_DWQw0oqslS4OuiXhMb8lnqH7TNHsj7QFGAFPsPPJO5XtHisNcP5JLeWGVkrwSproQTwnvgAS5fSrZoSNIjEjEgg9-ydlX0k2HW41xoRkmwJQ=w1175)
+![Tux, the Linux mascot]({{ "/assets/img/pag-inicial-01.png" | prepend: site.baseurl }})
 
 1. Descrição do Job: É o nome dado ao projeto;
 2. Tipo: É o tipo da pesquisa do projeto, pode ser:
@@ -23,7 +21,7 @@ categories: jekyll update
         - Campo vazio: É o campo em que se coloca o que será procurado. Por exemplo se está definido como Descrição do Job você irá colocar o nome do projeto.
     3. Preencha os campos de acordo com sua pesquisa;
     4. Para procurar clique em "Procurar", se deseja limpar os campos clique em "Resetar".
-![Tux, the Linux mascot](https://lh4.googleusercontent.com/-MmOXtLtoklI8zZL18E59v8ZWIyo3W_9XM4qymkV5lK_eRJ_gmh7hFucoIixDVhSTNUzt_RIy1tWCf3ae5SSlzBeOfTf0X40d3bHb-k9HHLx1gypQw=w572)
+![Tux, the Linux mascot]({{ "/assets/img/pag-inicial-02.png" | prepend: site.baseurl }})
 6. Recarregando a tabela: Após uma pesquisa de projeto clique em Recarregando tabela, localizado no canto inferior esquerdo, para todos os projetos voltarem ao Grid;
 7. Número de projetos que mostra por página;
 8. Nome do usuário logado, se deseja sair do sistema, clique em cima do Nome e depois clique em "Logout".
