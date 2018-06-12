@@ -88,15 +88,18 @@ function closeNav() {
 
 var modal = document.getElementById('myModal');
 var img = $("img");
+var notInclude = $(".logo")
 var img_content = $(".modal-content");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img.each(function (e) {
 	img[e].onclick = function () {
-		modal.style.display = "block";
-		modalImg.src = this.src;
-		captionText.innerHTML = this.alt;
-		img_content.width(img[e].naturalWidth);
+		if(!img[e].className.includes("logo")){
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+			img_content.width(img[e].naturalWidth);			
+		}
 	}
 });
 var divOpacity = document.getElementsByClassName("bodyOpacity")[0];

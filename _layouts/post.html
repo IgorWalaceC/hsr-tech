@@ -1,15 +1,12 @@
----
-permalink: "fastQuestAdmin"
----
 {% include head.html %}
 <body>               
-    {% include nav.html %}        
+    {% include navColeta.html %}        
     <div class="main" id="main">
             <header id="header">
                 <nav class="left">
                     <a href="#menu" onclick="openNav()" ><span>Menu</span></a>
                 </nav>
-                <img src="{{ "/assets/fonts/HSRTech_RGB_Cor.svg" | prepend: site.baseurl}}" alt="" class="logo logo-svg">				
+                <a href="{{ "/hsr-tech/" | prepend: site.url}}"><img src="{{ "/assets/fonts/HSRTech_RGB_Cor.svg" | prepend: site.baseurl}}" alt="" class="logo logo-svg"></a>
             </header>
             <div class="container">          
                 {{ content }}

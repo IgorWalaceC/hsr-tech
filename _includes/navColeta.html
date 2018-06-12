@@ -6,7 +6,9 @@
     <input type="text" id="myInput" onkeyup="searchNav()" placeholder="Pesquisar..." title="Type in a name">
     <div id="menuList">
         {% for post in site.posts %}            
+            {%if post.projeto == "fastQuestColeta" %}        
                 <a href="{{ site.baseurl }}{{ post.url }}" class="options">{{ post.title }}</a>            
+            {% endif %}    
         {% endfor %}
-    </div>
+    </div>    
 </div>  

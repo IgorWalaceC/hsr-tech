@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Página Principal"
-permalink: "fastQuestAdmin"
+projeto: "fastQuestColeta"
+permalink: /fastQuestColeta/pagina-principal
 ---
 # Página Principal
 
