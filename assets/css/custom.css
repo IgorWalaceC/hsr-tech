@@ -159,3 +159,19 @@ p{
         width: 100%;
     }
 }
+.DescProjeto{
+    color: white;
+}
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+.dropdown-btn{
+    margin-left: .8em;
+    position: absolute;
+    margin-top: -1.8em;
+}
+.fa-caret-down:hover{
+    color: rgb(0,174,172);
+}

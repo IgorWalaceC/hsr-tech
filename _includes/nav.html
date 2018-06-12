@@ -18,11 +18,28 @@
             {% endif %}        
         {% endfor %}    
     {% else %}
-        {% for post in site.posts %}
+        {% for post in site.posts %}            
             {%if post.projeto == "fastQuestAdmin" %}
-                <a href="{{ site.baseurl }}{{ post.url }}" class="options">{{ post.title }}</a>                           
-            {% endif %}        
+                {%if post.pasta %}
+                    
+                {% else %}     
+                    {%if post.nomePasta %}                                        
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}                                
+                        </a>                                                
+                        <i class="fa fa-caret-down dropdown-btn"></i>                        
+                        <div class="dropdown-container">
+                            {% for link in site.posts %}
+                                {% if post.nomePasta == link.pasta %}
+                                    <a href="{{ site.baseurl }}{{ link.permalink }}" class="options">{{ link.title }}</a>
+                                {%endif%}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <a href="{{ site.baseurl }}{{ post.url }}" class="options">{{ post.title }}</a>
+                    {%endif%}
+                {%endif%}
+            {%endif%}
         {% endfor %}    
     {% endif %}
     </div>    
-</div>  
+</div>
