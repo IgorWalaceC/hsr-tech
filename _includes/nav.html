@@ -1,0 +1,28 @@
+<div id="mySidenav" class="sidenav">
+    <a class="closebtn" onclick="closeNav()">&times;</a>  
+    <div class="img-menu">
+        <img src="{{ "/assets/fonts/HSRTech_RGB_Cor-white.svg" | prepend: site.baseurl}}" alt="" class="logo logo-svg logo-menu">				
+    </div> 
+    {%if page.projeto == "fastQuestColeta" %}
+        <h2 class="DescProjeto">{{ site.manualColeta}}</h2>
+    {% else %}
+        <h2 class="DescProjeto">{{ site.manualAdmin}}</h2>
+    {% endif %}    
+    <input type="text" id="myInput" onkeyup="searchNav()" placeholder="Pesquisar..." title="Type in a name">
+    <div id="menuList"> 
+        
+    {%if page.projeto == "fastQuestColeta" %}
+        {% for post in site.posts %}
+            {%if post.projeto == "fastQuestColeta" %}
+                <a href="{{ site.baseurl }}{{ post.url }}" class="options">{{ post.title }}</a>                           
+            {% endif %}        
+        {% endfor %}    
+    {% else %}
+        {% for post in site.posts %}
+            {%if post.projeto == "fastQuestAdmin" %}
+                <a href="{{ site.baseurl }}{{ post.url }}" class="options">{{ post.title }}</a>                           
+            {% endif %}        
+        {% endfor %}    
+    {% endif %}
+    </div>    
+</div>  

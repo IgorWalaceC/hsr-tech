@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Manual Admin
+projeto: "fastQuestAdmin"
 permalink: /fastQuestAdmin/
 ---
 
-# Manual do sistema FastQuest Coleta
+# Manual do sistema FastQuest Admin

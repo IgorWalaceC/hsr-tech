@@ -4,6 +4,8 @@ email: your-email@example.com
 description: "manual fastquest"
 baseurl: "/hsr-tech"
 url: "" 
+manualColeta: "Manual Coleta" 
+manualAdmin: "Manual Admin" 
 github_username:  HSRTech
 
 # Build settings

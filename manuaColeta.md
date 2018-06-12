@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Manual Coleta
+projeto: "fastQuestColeta"
 permalink: /fastQuestColeta/
 ---
 
