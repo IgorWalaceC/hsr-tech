@@ -2127,11 +2127,18 @@
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
-			width: 100%;
+			width: 100%;			
+			height: 250px;			
+		}
+		.fqc{
 			background-image: url(/hsr-tech/assets/img/manual.jpg);
-			height: 250px;
 			background-size: 700px;
-			background-position: center
+			background-position: center;
+		}
+		.fqa{
+			background-image: url(/hsr-tech/assets/img/admin.jpg);
+			background-size: 700px;
+			background-position: center;
 		}
 
 			.image.fit img {

@@ -8,9 +8,8 @@
     {% else %}
         <h2 class="DescProjeto">{{ site.manualAdmin}}</h2>
     {% endif %}    
-    <input type="text" id="myInput" onkeyup="searchNav()" placeholder="Pesquisar..." title="Type in a name">
-    <div id="menuList"> 
-        
+    <input type="text" id="myInput" onkeyup="searchNav()" placeholder="Pesquisar..." title="Type in a name">    
+    <div id="menuList">     
     {%if page.projeto == "fastQuestColeta" %}
         {% for post in site.posts %}
             {%if post.projeto == "fastQuestColeta" %}
@@ -24,6 +23,7 @@
                     
                 {% else %}     
                     {%if post.nomePasta %}                                        
+                    <div class="dropdown">
                         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}                                
                         </a>                                                
                         <i class="fa fa-caret-down dropdown-btn"></i>                        
@@ -34,6 +34,7 @@
                                 {%endif%}
                             {% endfor %}
                         </div>
+                    </div>
                     {% else %}
                         <a href="{{ site.baseurl }}{{ post.url }}" class="options">{{ post.title }}</a>
                     {%endif%}

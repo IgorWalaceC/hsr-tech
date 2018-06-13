@@ -57,7 +57,7 @@ img{
     margin-left: auto !important;
     margin-right: auto !important;
 }
-h1,h2,h3{    
+h1,h2,h3,h4{    
     text-align: center;
 }
 p{
@@ -158,6 +158,9 @@ p{
     .modal-content {
         width: 100%;
     }
+}
+.menuPrincipal{
+    margin-top: 3em !important;
 }
 .DescProjeto{
     color: white;

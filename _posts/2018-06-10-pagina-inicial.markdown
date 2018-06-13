@@ -6,7 +6,7 @@ permalink: /fastQuestColeta/pagina-principal
 ---
 # Página Principal
 
-![Tux, the Linux mascot]({{ "/assets/img/pag-inicial-01.png" | prepend: site.baseurl }})
+![Imagem de apoio 1]({{ "/assets/img/pag-inicial-01.png" | prepend: site.baseurl }})
 
 1. Descrição do Job: É o nome dado ao projeto;
 2. Tipo: É o tipo da pesquisa do projeto, pode ser:
@@ -23,7 +23,7 @@ permalink: /fastQuestColeta/pagina-principal
         - Campo vazio: É o campo em que se coloca o que será procurado. Por exemplo se está definido como Descrição do Job você irá colocar o nome do projeto.
     3. Preencha os campos de acordo com sua pesquisa;
     4. Para procurar clique em "Procurar", se deseja limpar os campos clique em "Resetar".
-![Tux, the Linux mascot]({{ "/assets/img/pag-inicial-02.png" | prepend: site.baseurl }})
+![Imagem de apoio 2]({{ "/assets/img/pag-inicial-02.png" | prepend: site.baseurl }})
 6. Recarregando a tabela: Após uma pesquisa de projeto clique em Recarregando tabela, localizado no canto inferior esquerdo, para todos os projetos voltarem ao Grid;
 7. Número de projetos que mostra por página;
 8. Nome do usuário logado, se deseja sair do sistema, clique em cima do Nome e depois clique em "Logout".

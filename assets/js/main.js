@@ -112,16 +112,27 @@ span.onclick = function () {
 }
 
 function searchNav() {
+	$(".dropdown-container").css("display", "block");
+	$(".dropdown-btn").css("display", "none");
+	$(".dropdown-container").css("background", "none");
+	$(".dropdown-container").css("padding-left", "0");
 	var input, filter, ul, li, a, i;
 	input = document.getElementById("myInput");
 	filter = input.value.toUpperCase();
 	ul = document.getElementById("menuList");
 	li = ul.getElementsByTagName("a");
+	if (filter == "") {
+		$(".dropdown-container").css("display", "none");		
+		$(".dropdown-btn").css("display", "block");
+		$(".dropdown-container").css("background", "#262626");
+		$(".dropdown-container").css("padding-left", "8px");
+	}
 	for (i = 0; i < li.length; i++) {
 		a = li[i];
-		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+		if (a.innerHTML.toUpperCase().search(filter) > -1) {
 			li[i].style.display = "";
-		} else {
+		}		
+		else {
 			li[i].style.display = "none";
 		}
 	}
